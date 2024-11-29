@@ -1,1 +1,1 @@
-# sc-scanner
+# scanner
