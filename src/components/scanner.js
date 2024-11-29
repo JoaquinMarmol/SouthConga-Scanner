@@ -91,7 +91,7 @@ const QRScanner = () => {
       const ticketId = parsedData.ticket_id;
       setTicketId(ticketId);
 
-        const response = await axios.put(
+        const response = await axios.post(
           `https://digisoftware.online/api/tickets/${ticketId}/validate/`
         );
 
