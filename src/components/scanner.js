@@ -84,19 +84,15 @@ const QRScanner = () => {
 
   const handleScan = async (data) => {
     if (data) {
+      try {
       setScanResult(data);
 
-      const parsedData = typeof data === 'string' ? JSON.parse(data) : data;
-      if (!parsedData.ticket_id) {
-        throw new Error('Formato de QR inválido: falta el ticket_id');
-      }
-
+      const parsedData = JSON.parse(data.text || data);
       const ticketId = parsedData.ticket_id;
       setTicketId(ticketId);
 
-      try {
         const response = await axios.put(
-          `https://digisoftware.online/api/tickets/${extractedTicketId}/validate/`
+          `https://digisoftware.online/api/tickets/${ticketId}/validate/`
         );
 
         const { status, message } = response.data;
