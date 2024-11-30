@@ -65,6 +65,7 @@ const closeButtonStyle = {
   background: 'none',
   fontSize: '20px',
   cursor: 'pointer',
+  color: '#000',
 };
 
 const QRScanner = () => {
