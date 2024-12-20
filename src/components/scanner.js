@@ -16,7 +16,7 @@ const Modal = ({ message, onClose }) => {
       <div style={modalStyle}>
         <button style={closeButtonStyle} onClick={onClose}>✖</button>
         <p style={modalText}>{message}</p>
-        <img src="./south.png" alt="" />
+        <img src="./logo.jpeg" alt="" />
       </div>
     </div>
   );
