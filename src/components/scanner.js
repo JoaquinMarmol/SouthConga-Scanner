@@ -162,7 +162,7 @@ const QRScanner = () => {
 
       {modalVisible && (
         <Modal 
-          message={`ID del Ticket: ${ticketId} - ${confirmation ? '✅' : '❌'} ${message}`} 
+          message={`${message}`} 
           onClose={handleRescan} 
         />
       )}
